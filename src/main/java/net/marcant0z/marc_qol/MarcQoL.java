@@ -1,5 +1,9 @@
 package net.marcant0z.marc_qol;
 
+import net.marcant0z.marc_qol.item.ModCreativeModTabs;
+import net.marcant0z.marc_qol.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -31,6 +35,9 @@ public class MarcQoL {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        ModCreativeModTabs.register(modEventBus);
+
+        ModItems.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (MarcQoL) to respond directly to events.
@@ -59,7 +66,10 @@ public class MarcQoL {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS){
+            event.accept(ModItems.PENGUINITE);
+            event.accept(ModItems.RAW_PENGUINITE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

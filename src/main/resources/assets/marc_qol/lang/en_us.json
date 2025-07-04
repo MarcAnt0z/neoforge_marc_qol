@@ -1,13 +1,7 @@
 {
-  "itemGroup.marc_qol": "Example Mod Tab",
-  "block.marc_qol.example_block": "Example Block",
-  "item.marc_qol.example_item": "Example Item",
+"item.marc_qol.penguinite" : "Penguinite",
+"item.marc_qol.raw_penguinite" : "Raw Penguinite",
 
-  "marc_qol.configuration.title": "Marc QoL Configs",
-  "marc_qol.configuration.section.marc_qol.common.toml": "Marc QoL Configs",
-  "marc_qol.configuration.section.marc_qol.common.toml.title": "Marc QoL Configs",
-  "marc_qol.configuration.items": "Item List",
-  "marc_qol.configuration.logDirtBlock": "Log Dirt Block",
-  "marc_qol.configuration.magicNumberIntroduction": "Magic Number Text",
-  "marc_qol.configuration.magicNumber": "Magic Number"
+
+  "itemGroup.marc_qol.marc_qol_tab": "Marc QoL"
 }
